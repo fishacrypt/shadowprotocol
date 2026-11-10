@@ -2,8 +2,6 @@
 
 A multiplayer encrypted strategy game on Ethereum Sepolia, powered by Zama FHEVM. Two to four players bid for artifacts over five rounds. Every move (action, bid, tactic power, target) is an FHE ciphertext, so rivals can never read your strategy, yet the contract still settles every round.
 
-Built with [Arc Studio](https://studio.arc.io)
-
 ## The game
 
 - 2 to 4 players, 5 rounds, 1,000 starting credits, +100 income per round you play.
