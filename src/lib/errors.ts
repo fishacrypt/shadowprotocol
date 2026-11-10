@@ -36,7 +36,7 @@ export function parseError(error: unknown): ParsedError {
     if (reverted instanceof ContractFunctionRevertedError) {
       const name = reverted.data?.errorName
       if (name && CONTRACT_ERRORS[name]) return { message: CONTRACT_ERRORS[name], cancelled: false }
-      if (name) return { message: \`Contract rejected the action (\${name}).\`, cancelled: false }
+      if (name) return { message: `Contract rejected the action (${name}).`, cancelled: false }
     }
   }
   const text = error instanceof Error ? error.message : String(error)
@@ -62,7 +62,7 @@ export function parseError(error: unknown): ParsedError {
   const detail = text.replace(/https?:\/\/\S+/g, '[URL]').slice(0, 240)
   return {
     message: detail
-      ? \`Seed/action failed: \${detail}\`
+      ? `Seed/action failed: ${detail}`
       : 'Something went wrong. Nothing was changed, so it is safe to retry.',
     cancelled: false,
   }
