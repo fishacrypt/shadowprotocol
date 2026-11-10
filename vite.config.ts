@@ -36,6 +36,12 @@ export default defineConfig({
       'vite-plugin-node-polyfills/shims/process',
     ],
   },
+  build: {
+    // Keep wasm-feature-detect's embedded WebAssembly module as a native data-URL import.
+    rollupOptions: {
+      external: (id) => id.startsWith('data:application/wasm'),
+    },
+  },
   server: {
     allowedHosts: true,
     cors: true,
