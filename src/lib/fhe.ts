@@ -6,7 +6,7 @@ import { toHex, type Address, type Hex, type WalletClient } from 'viem'
 import { SEPOLIA_RPC_URL } from '@/config'
 import { TARGET_CHAIN_ID } from '@/lib/env'
 
-type SdkModule = typeof import('@zama-fhe/relayer-sdk/bundle')
+type SdkModule = typeof import('@zama-fhe/relayer-sdk/web')
 type Instance = Awaited<ReturnType<SdkModule['createInstance']>>
 
 let instancePromise: Promise<Instance> | undefined
@@ -15,7 +15,7 @@ let instancePromise: Promise<Instance> | undefined
 export function getFhe(): Promise<Instance> {
   if (!instancePromise) {
     instancePromise = (async () => {
-      const sdk = await import('@zama-fhe/relayer-sdk/bundle')
+      const sdk = await import('@zama-fhe/relayer-sdk/web')
       await sdk.initSDK()
       return sdk.createInstance({ ...sdk.SepoliaConfig, network: SEPOLIA_RPC_URL })
     })().catch((err) => {
