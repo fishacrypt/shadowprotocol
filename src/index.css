@@ -79,3 +79,82 @@ p { text-wrap: pretty; }
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Shadow Protocol visual system: obsidian surfaces, electric violet and signal cyan. */
+html {
+  scroll-behavior: smooth;
+  background: #080a10;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: -0.012em;
+  background:
+    radial-gradient(ellipse 68rem 38rem at 8% -14%, rgba(112, 74, 207, 0.22), transparent 66%),
+    radial-gradient(ellipse 48rem 34rem at 104% 12%, rgba(25, 180, 190, 0.12), transparent 64%),
+    linear-gradient(180deg, #0b0e17 0%, #080a10 48%, #090b12 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(151, 164, 190, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(151, 164, 190, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+::selection {
+  color: #f8fbff;
+  background: rgba(121, 92, 220, 0.55);
+}
+
+.panel {
+  border-color: rgba(155, 169, 197, 0.13);
+  background: linear-gradient(145deg, rgba(24, 29, 44, 0.88), rgba(13, 17, 27, 0.88));
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.panel-inner {
+  border-color: rgba(155, 169, 197, 0.10);
+  background: linear-gradient(145deg, rgba(8, 11, 19, 0.72), rgba(15, 19, 30, 0.66));
+}
+
+.btn {
+  letter-spacing: 0.015em;
+}
+
+.btn-primary {
+  box-shadow: 0 8px 28px rgba(113, 83, 214, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 10px 34px rgba(113, 83, 214, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+input, button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(76, 220, 224, 0.9);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  body::before { background-size: 32px 32px; }
+  .panel { border-radius: 1.1rem; }
+}
