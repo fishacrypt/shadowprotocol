@@ -1,0 +1,114 @@
+{
+  "contractAddress": "0x4a7bf61cf33c6de46b85b29ab60d6d488a70a7f6",
+  "network": "ETH-SEPOLIA",
+  "deployerWalletId": "3c7d413d-6543-5aa6-83fd-4f55f2bd5218",
+  "contract_code_path": "/home/user/app/contracts/Create2Factory.sol",
+  "contract_compiled_code_path": "/home/user/app/contracts/out/Create2Factory.sol/Create2Factory.json",
+  "contract_network_and_links": {
+    "Ethereum Sepolia": "https://sepolia.etherscan.io/address/0x4a7bf61cf33c6de46b85b29ab60d6d488a70a7f6"
+  },
+  "contract_deployments": [
+    {
+      "chain": "Ethereum Sepolia",
+      "address": "0x4a7bf61cf33c6de46b85b29ab60d6d488a70a7f6",
+      "explorerUrl": "https://sepolia.etherscan.io/address/0x4a7bf61cf33c6de46b85b29ab60d6d488a70a7f6",
+      "txHash": "0x7378879da5aab1102e7c75a5e51b2925a1e5d9c704eaaf2fc9c1d3b272de5a35",
+      "deployedAt": "2026-11-09T23:06:18.597Z"
+    }
+  ],
+  "abi": [
+    {
+      "type": "function",
+      "name": "computeAddress",
+      "inputs": [
+        {
+          "name": "salt",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "bytecodeHash",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "deploy",
+      "inputs": [
+        {
+          "name": "salt",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "bytecode",
+          "type": "bytes",
+          "internalType": "bytes"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "deployedAddress",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "payable"
+    },
+    {
+      "type": "event",
+      "name": "Deployed",
+      "inputs": [
+        {
+          "name": "deployedAddress",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "salt",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "Create2EmptyBytecode",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "FailedDeployment",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InsufficientBalance",
+      "inputs": [
+        {
+          "name": "balance",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "needed",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    }
+  ]
+}

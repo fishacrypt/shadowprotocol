@@ -1,0 +1,26 @@
+{
+  "network": "ethereum-sepolia",
+  "chainId": 11155111,
+  "contracts": {
+    "ShadowProtocol": {
+      "address": "0xd48eefC477a665ad6634E2bEfbC3114Ad86F65C0",
+      "deployTx": "0x7e4cc1bb97b9b535eea88990db13627e9ea969aabb4dbcf38082f226591b57d6",
+      "block": 12100699,
+      "constructorArgs": {
+        "prizeToken": "0x4E7B06D78965594eB5EF5414c357ca21E1554491",
+        "roundEngine": "0x7A39BdD3c5b1bD5C44054696C3d67205B1665A08"
+      }
+    },
+    "ShadowRounds": {
+      "address": "0x7A39BdD3c5b1bD5C44054696C3d67205B1665A08",
+      "deployTx": "0xfd2482f8996a2b534d8c20f7ad5d8861a480106785a7010aa7c97f0f08e4c40a",
+      "block": 12100698
+    }
+  },
+  "prizeToken": {
+    "name": "Confidential USDT (Mock) cUSDTMock - official Zama Sepolia ERC-7984 test wrapper",
+    "address": "0x4E7B06D78965594eB5EF5414c357ca21E1554491",
+    "underlying": "0xa7dA08FafDC9097Cc0E7D4f113A61e31d7e8e9b0",
+    "source": "https://docs.zama.org/protocol/protocol-apps/addresses/testnet/sepolia"
+  }
+}
