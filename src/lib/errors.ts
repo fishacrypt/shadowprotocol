@@ -57,5 +57,13 @@ export function parseError(error: unknown): ParsedError {
     return { message: 'Your wallet is not authorised to decrypt that value.', cancelled: false }
   }
   if (lower.includes('reverted')) return { message: 'The transaction reverted onchain. Nothing was changed.', cancelled: false }
-  return { message: 'Something went wrong. Nothing was changed, so it is safe to retry.', cancelled: false }
+
+  // Preserve the underlying diagnostic message during troubleshooting.
+  const detail = text.replace(/https?:\/\/\S+/g, '[URL]').slice(0, 240)
+  return {
+    message: detail
+      ? `Seed/action failed: ${detail}`
+      : 'Something went wrong. Nothing was changed, so it is safe to retry.',
+    cancelled: false,
+  }
 }
