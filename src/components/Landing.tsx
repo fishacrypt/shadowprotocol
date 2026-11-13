@@ -126,7 +126,26 @@ export function Landing({ onPlay }: { onPlay: () => void }) {
         </div>
       </section>
 
-      <div className="section-space !pt-4"><PrivacyMap /></div>
+
+      <section className="section-space">
+        <div className="section-kicker">GOOD TO KNOW</div>
+        <div className="grid gap-8 lg:grid-cols-[.7fr_1.3fr]">
+          <div><h2 className="section-heading">Questions,<br /><span className="text-white/40">answered.</span></h2><p className="mt-4 max-w-sm text-sm leading-7 text-slate-300/55">A quick guide to the rules, privacy model and test environment.</p></div>
+          <div className="space-y-2">
+            {[
+              ['Can anyone see my moves?', 'No. Your action, bid, target and private balances are encrypted before submission. The chain records that you submitted, but not the contents of your move.'],
+              ['How does the game decide who wins a round?', 'The contract evaluates the encrypted inputs according to the game rules. The intermediate values remain encrypted; the public result identifies the round outcome.'],
+              ['What does the final verification prove?', 'The final scores are revealed with a KMS-signed proof. The contract verifies the signature and the exact values before accepting the leaderboard.'],
+              ['Are credits or prizes real money?', 'Gameplay credits are in-game values with no monetary value. An optional cUSDT prize escrow is separate and only available in the configured test environment.'],
+              ['Which network should I use?', 'Connect a wallet on Ethereum Sepolia. This is a testnet deployment; use test tokens and do not send real funds.'],
+            ].map(([question, answer]) => <details key={question} className="group rounded-2xl border border-white/[.08] bg-white/[.02] px-5 py-4 open:border-cyan-100/20 open:bg-cyan-100/[.025]">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-sm font-semibold text-white marker:hidden">{question}<span className="text-xl font-light text-cyan-100/65 transition-transform group-open:rotate-45">+</span></summary>
+              <p className="max-w-2xl pt-3 text-sm leading-6 text-slate-300/60">{answer}</p>
+            </details>)}
+          </div>
+        </div>
+      </section>
+\n      <div className="section-space !pt-4"><PrivacyMap /></div>
       <footer className="mt-16 flex flex-col gap-3 border-t border-white/[.08] pt-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><span className="font-display font-semibold uppercase tracking-[.16em] text-white/65">Shadow Protocol</span><span>Built on Zama FHEVM · Ethereum Sepolia</span><span>Gameplay credits have no monetary value. cUSDT prizes are optional.</span></footer>
     </div>
   )
