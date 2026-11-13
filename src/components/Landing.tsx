@@ -146,7 +146,6 @@ export function Landing({ onPlay }: { onPlay: () => void }) {
         </div>
       </section>
 \n      <div className="section-space !pt-4"><PrivacyMap /></div>
-      <footer className="mt-16 flex flex-col gap-3 border-t border-white/[.08] pt-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><span className="font-display font-semibold uppercase tracking-[.16em] text-white/65">Shadow Protocol</span><span>Built on Zama FHEVM · Ethereum Sepolia</span><span>Gameplay credits have no monetary value. cUSDT prizes are optional.</span></footer>
     </div>
   )
 }
