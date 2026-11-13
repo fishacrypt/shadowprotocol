@@ -54,8 +54,12 @@ export default function App() {
           {route.view === 'profile' && <Profile onOpenMatch={openMatch} />}
         </motion.main>
       </AnimatePresence>
-      <footer className="mx-auto max-w-6xl px-4 pb-10 pt-4 text-center text-xs text-white/30">
-        Shadow Protocol runs on Ethereum Sepolia with Zama FHEVM. Gameplay credits have no monetary value and are separate from the optional cUSDT prize.
+      <footer className="border-t border-white/[.07] bg-black/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <span className="font-display font-semibold uppercase tracking-[.16em] text-white/65">Shadow Protocol</span>
+          <span>Powered by Zama FHEVM · Ethereum Sepolia</span>
+          <span>Gameplay credits have no monetary value. cUSDT prizes are optional.</span>
+        </div>
       </footer>
     </div>
   )
