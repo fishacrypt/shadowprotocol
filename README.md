@@ -6,6 +6,8 @@ Shadow Protocol is a multiplayer strategy game built around confidential computa
 
 The application runs on **Ethereum Sepolia** and uses **Zama FHEVM** for encrypted gameplay.
 
+> **This project is not audited, endorsed or operated by Zama. Use at your own risk.**
+
 - **Live app:** https://shadowpro.vercel.app/
 - **Network:** Ethereum Sepolia (chain ID `11155111`)
 - **Players:** 2–4 per match
