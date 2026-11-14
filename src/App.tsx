@@ -59,6 +59,7 @@ export default function App() {
           <span className="font-display font-semibold uppercase tracking-[.16em] text-white/65">Shadow Protocol</span>
           <span>Powered by Zama FHEVM · Ethereum Sepolia</span>
           <span>Gameplay credits have no monetary value. cUSDT prizes are optional.</span>
+          <span className="text-white/45 sm:basis-full sm:text-center">**This project is not audited, endorsed or operated by Zama. Use at your own risk.**</span>
         </div>
       </footer>
     </div>
